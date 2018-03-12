@@ -4,6 +4,9 @@ body {
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
+h2, h3 {
+    margin:0;
+}
 .main-page-container {
     width:100%;
     height:100vh;
@@ -11,6 +14,9 @@ body {
     background-image: url('../img/background.jpg');
     background-position: center;
     background-repeat: no-repeat;
+    -webkit-box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
 }
 .main-page-cover {
     width:100%;
@@ -42,4 +48,117 @@ nav {
     width:50%;
     top:30%;
     left:25%;
+}
+.all-pages {
+    width: 100%;
+    height: 400vh;
+    background-color: #E6F6FC;
+}
+.second-page {
+    display: flex;
+    justify-content: space-around;
+    padding-top: calc(50vh - 275px);
+    height: calc(100vh - calc(50vh - 275px));
+}
+.second-page-box {
+    width:350px;
+    height:500px;
+    background-color: #C5F0FF;
+    border-radius: 3px;
+    transition-duration: 0.1s;
+    cursor: default;
+}
+.box-header {
+    width:100%;
+    height: 35%;
+    background-color: #69BDD1;
+    text-align: center;
+    padding-top: 20px;
+}
+.box-icon {
+    font-size: 100px !important;
+}
+.box-content {
+    height:calc(65% - 20px);
+    width: calc(100% - 20px);
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 20px;
+    text-align: center;
+}
+.second-page-box:hover {
+    -webkit-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+    box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+}
+.third-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #69BDD1;
+    -webkit-box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 10px 31px 0px rgba(0,0,0,0.75);
+}
+.row-container {
+    height: calc(50vh - calc(25vh - 200px));
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding-top:calc(25vh - 200px);
+}
+.row-box {
+    width:260px;
+    height: 360px;
+    text-align: center;
+    padding:20px;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+}
+.row-box:hover {
+    -webkit-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+    box-shadow: 0px 14px 92px -18px rgba(0,0,0,0.75);
+}
+.terapi-img {
+    width:100%;
+    border-radius: 50%;
+}
+.row-box-title {
+    line-height: 100px;
+    font-size: 22px;
+}
+.fourth-page {
+    display:flex;
+}
+.contact-info-text {
+
+}
+.left-side {
+    width:50%;
+    height: 90vh;
+    padding-top: 10vh;
+}
+.right-side {
+    width:50%;
+    height: 40vh;
+    text-align: center;
+    padding-top: 60vh;
+}
+.fourth-page-title {
+    font-size: 50px;
+}
+.contact-info-text {
+    font-size:25px;
+    margin-top: 20px;
+}
+#gmap_canvas {
+    margin-left: 10%;
+    width:90%;
+    height:90%;
 }
