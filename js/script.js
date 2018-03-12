@@ -4,16 +4,22 @@ $(document).keydown(function (e) {
     {
        case 38:
             e.preventDefault();
-        $('html, body').animate({ scrollTop: $(window).scrollTop() - screen.height}, 500);
+        $('html, body').animate({ scrollTop: $(window).scrollTop() - $(window).height()}, 500);
            break;
        case 40:
-           $('html, body').animate({ scrollTop:$(window).scrollTop() + screen.height}, 500);
+           $('html, body').animate({ scrollTop:$(window).scrollTop() + $(window).height()}, 500);
            break;
     }
   }
 });
-
-
+$(document).ready(function(){
+  $("a").click(function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+  });
+});
 function toggleHamburger() {
   if(document.getElementById("hamburger-menu").classList.contains("active-menu")) {
     document.getElementById("hamburger-menu").classList.remove("active-menu");
