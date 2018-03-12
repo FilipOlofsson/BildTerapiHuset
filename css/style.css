@@ -7,6 +7,12 @@ body {
 h2, h3 {
     margin:0;
 }
+.hamburger-toggle {
+    display:none;
+}
+.mobile-navbar-link {
+    display:none;
+}
 .main-page-container {
     width:100%;
     height:100vh;
@@ -22,6 +28,11 @@ h2, h3 {
     width:100%;
     height:100%;
     background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+.noscroll {
+    overflow: hidden;
+    height: 100vh;
 }
 nav {
     padding: 24px;
@@ -34,7 +45,7 @@ nav {
 .navbar-link {
     transition: 0.4s;
     color: #ffffff;
-    font-size: 24px;
+    font-size: 30px;
     text-decoration: none;
     padding:0 40px;
 }
@@ -44,14 +55,15 @@ nav {
     padding: 24px 40px;
 }
 .logo-img {
+    width: 700px;
     position: absolute;
-    width:50%;
-    top:30%;
-    left:25%;
+    bottom:0;
+    top:0;
+    left:calc(50% - 350px);
+    margin:auto;
 }
 .all-pages {
     width: 100%;
-    height: 400vh;
     background-color: #E6F6FC;
 }
 .second-page {
@@ -161,4 +173,104 @@ nav {
     margin-left: 10%;
     width:90%;
     height:90%;
+    border:none;
+}
+.mapouter {
+    height:90%;
+}
+.gmap_canvas {
+    height: 100%;
+}
+.mobile-contact-info-text {
+    display:none;
+}
+
+@media screen and (max-width: 700px) {
+    nav {
+        display:none;
+    }
+    .logo-img {
+        width:250px;
+        left:calc(50% - 125px);
+    }
+    .hamburger-toggle {
+        width:50px;
+        height:50px;
+        display:block;
+        background-image: url('../img/hamburgr.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .hamburger-menu {
+        display:none;
+        width:100%;
+        height:100vh;
+        background-color: #C5F0FF;
+
+    }
+    .active-menu {
+        display:block;
+    }
+    .mobile-navbar-header {
+        width: 100%;
+        height:50px;
+        background-color: #69BDD1;
+    }
+    .close-hamburger {
+        width:50px;
+        height:50px;
+        background-image: url('../img/close.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .mobile-navbar-link {
+        width: 100%;
+        height:10vh;
+        line-height: 10vh;
+        font-size: 23px;
+        border-bottom: solid 2px #69BDD1;
+    }
+    .inactive {
+        display:none;
+    }
+    .second-page {
+        display:block;
+        padding-top: 0;
+        height: auto;
+    }
+    .second-page-box {
+        height:100vh;
+        width: 100%;
+    }
+    .row-box {
+        height:auto;
+        padding:0;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: calc(25vh - 37.5px);
+    }
+    .terapi-img {
+        height: 75px;
+        width: 75px;
+    }
+    .row-box:hover {
+        -webkit-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0);
+        -moz-box-shadow: 0px 14px 92px -18px rgba(0,0,0,0);
+        box-shadow: 0px 14px 92px -18px rgba(0,0,0,0);
+    }
+    .row-box-title {
+        display:none;
+    }
+    .left-side {
+        width: 90%;
+    }
+    .right-side {
+        display:none;
+    }
+    .mobile-contact-info-text {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
 }
