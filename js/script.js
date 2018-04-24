@@ -1,14 +1,15 @@
-$(document).keydown(function (e) {
-  if(!window.matchMedia("(max-width: 1000px)").matches) {
-    switch(e.which) 
-    {
-       case 38:
-            e.preventDefault();
-        $('html, body').animate({ scrollTop: $(window).scrollTop() - $(window).height()}, 500);
-           break;
-       case 40:
-           $('html, body').animate({ scrollTop:$(window).scrollTop() + $(window).height()}, 500);
-           break;
+$(document).keydown(function (e) {  // Kallas om en knapp trycks ner
+  if(!window.matchMedia("(max-width: 1000px)").matches) { // Om webbläsaren är större än 1000 pixlar, utesluter mobila enheter
+    if(($(window).scrollTop() % $(window).height()) === 0) {  // Om webbläsaren är vid starten av en ny sida.
+      switch(e.which) {   // Switcha med tangenterna som trycks ner
+         case 38: // 
+              e.preventDefault();
+              $('html, body').animate({ scrollTop: $(window).scrollTop() - $(window).height()}, 500);
+             break;
+         case 40:
+             $('html, body').animate({ scrollTop:$(window).scrollTop() + $(window).height()}, 500);
+             break;
+      }
     }
   }
 });
@@ -36,4 +37,16 @@ function toggleHamburger() {
     document.getElementById("logo-img").classList.add("inactive");
     document.getElementById("body").classList.add("noscroll");
   }
+}
+$(document).ready(function() {
+  $(document).scroll(function() {
+    if($(document).scrollTop() >= $(window).height()) {
+      $("#to-top").removeClass('not-visible');
+    } else {
+      $("#to-top").addClass('not-visible');
+    }
+  }) 
+})
+function toTop() {
+  $('html, body').animate({ scrollTop:0}, 500);
 }

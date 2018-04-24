@@ -157,9 +157,9 @@ nav {
 }
 .right-side {
     width:50%;
-    height: 40vh;
+    height: 70vh;
     text-align: center;
-    padding-top: 60vh;
+    padding-top: 30vh;
 }
 .fourth-page-title {
     font-size: 50px;
@@ -273,4 +273,27 @@ nav {
         text-align: center;
     }
     
+}
+#to-top {
+    width:80px;
+    height:80px;
+    position: fixed;
+    left:20px;
+    top:20px;
+    z-index: 999;
+    cursor:pointer;
+}
+.arrow-up {
+    font-size: 80px !important;
+    color:black;
+}
+.not-visible {
+    display:none;
+}
+.arrow-up:hover {
+    font-size: 100px !important;
+}
+#to-top:hover {
+    left:10px;
+    top:10px;
 }
